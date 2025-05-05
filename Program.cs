@@ -18,12 +18,17 @@ namespace BankAccount
             {
                 Console.WriteLine("Choose an option:");
                 Console.WriteLine("[A] Login Account.");
+                Console.WriteLine("[B] Create Account.");
                 Console.WriteLine("[E] Exit to program.");
                 string str = Console.ReadLine();
                 
                 if(str == "E" || str == "e"){
                     isExitToProgram = true;
-                } else if(str == "A" || str == "a")
+                } else if (str == "B" || str == "b")
+                {
+                    Console.WriteLine("EME EME LANG TO");
+                }
+                else if (str == "A" || str == "a")
                 {
                     bool isLogin = false;
                     int loginAccountId = 0;
@@ -37,12 +42,12 @@ namespace BankAccount
 
                         bool check = account.checkAccount(accountId, password);
 
-                        if(check == true)
+                        if (check == true)
                         {
                             isLogin = true;
                             loginAccountId = accountId;
                             Console.WriteLine("Login Successfully");
-                        } else if(check == false)
+                        } else if (check == false)
                         {
                             Console.WriteLine("Please check your account ID and password.");
                         }
